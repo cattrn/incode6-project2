@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* if experienced with CSS, check out custom properties */
+
+/* UNITS OF MEASUREMENT
+
+px - pixels - fixed measurement
+
+vh/vw - viewport height/width - the percent of the user's window height/width
+
+% - percentage of parent size
+
+rem/em - relative to parent font-size (em) or root font size (rem)
+
+*/
+
+/* GLOBAL/LAYOUT */
+
+body {
+  background-color:rgb(210, 232, 232);
+}
+
+main {
+  padding: 3rem 5%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+nav {
+  padding: 2rem 8%;
+  background-color:rgb(171, 128, 91);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* TYPOGRAPHY */
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a.cta {
+  color: rgb(56, 94, 126);
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+
+/* HEADER */
+
+.hero {
+  position: relative;
+}
+
+.hero h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero img {
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -3px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+/* HOMEPAGE */
+
+.text {
+  padding: 3rem 5%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 35px 0;
+}
+
+.cards.space-around {
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  background-color: rgb(171, 128, 91);
+  color: #fff;
+  width: 28%;
+  padding: 2rem;
+  align-items: center;
+}
+
+.card img {
+  max-width: 35%;
+  margin-right: 10px; /* needs to be removed if img and p stacks TODO: @media */
+}
