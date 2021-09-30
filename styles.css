@@ -41,6 +41,26 @@ img {
   max-width: 100%;
 }
 
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-thirds > *:first-child {
+  width: 60%;
+}
+
+.flex-thirds > *:last-child {
+  width: 30%;
+}
+
 /* TYPOGRAPHY */
 
 html {
@@ -51,11 +71,21 @@ h1 {
   color: #fff;
   font-weight: 900;
   font-size: 3rem;
+  text-align: center;
 }
 
 h2 {
   font-weight: 900;
   font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.75rem;
 }
 
 nav a {
@@ -113,6 +143,10 @@ nav ul li {
   padding: 3rem 5%;
 }
 
+.flex img {
+  object-fit: cover;
+}
+
 .cards {
   display: flex;
   justify-content: space-between;
@@ -136,4 +170,45 @@ nav ul li {
 .card img {
   max-width: 35%;
   margin-right: 10px; /* needs to be removed if img and p stacks TODO: @media */
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Conventional mobile breakpoint is 768px */
+
+@media screen and (max-width: 870px) {
+  .cards {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .card {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .card img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  nav, nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex-thirds > *:first-child, .flex-thirds > *:last-child {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .flex-thirds img {
+    max-height: 150px;
+    object-fit: cover;
+  }
 }
