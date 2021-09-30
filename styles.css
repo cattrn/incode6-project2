@@ -205,6 +205,7 @@ nav ul li {
   .flex-thirds > *:first-child, .flex-thirds > *:last-child {
     width: 80%;
     margin: 0 auto;
+    padding: 0;
   }
 
   .flex-thirds img {
