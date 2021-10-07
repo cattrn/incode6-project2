@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/formHandler.js" defer></script>
+</head>
+<body>
+  <div class="modal-overlay"></div>
+  <dialog class="modal">
+    <h3>Submitted!</h3>
+    <p>Thank you for getting in contact. We'll get in touch with you as soon as possible.</p>
+    <button id="close-modal">Close</button>
+  </dialog>
+
+  <header>
+
+    <div class="hero">
+      <h1>Cat's Café</h1>
+      <img src="/assets/header.jpg" alt="A top down view of Cat's café. Two laptops and some coffee on a wooden table.">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">About</a></li>
+        <li><a href="/menu.html">Menu</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+      <a class="cta" href="/book.html">Book a Table</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Contact Us</h1>
+
+      <form id="contact-form">
+        <div>
+          <label for="name">Name*</label>
+          <input id="name" type="text" name="name" placeholder="Please write your name here" required>
+        </div>
+
+        <div>
+          <label for="email">Email*</label>
+          <input id="email" type="email" name="email" placeholder="Please write your email here" required>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Please write your message here"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+  
+</body>
+</html>

@@ -30,6 +30,7 @@ main {
   padding: 3rem 5%;
   max-width: 1080px;
   margin: 0 auto;
+  min-height: 80vh;
 }
 
 nav {
@@ -39,6 +40,21 @@ nav {
 
 img {
   max-width: 100%;
+}
+
+button {
+  border: none;
+  padding: 1rem 1.5rem;
+  background: rgb(171, 128, 91);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: white;
+  margin: 1.5rem;
+}
+
+button:hover {
+  background: rgb(56, 94, 126);
 }
 
 .flex {
@@ -172,7 +188,50 @@ nav ul li {
   margin-right: 10px; /* needs to be removed if img and p stacks TODO: @media */
 }
 
-/* RESPONSIVE DESIGN */
+/* MODAL------------------------------------------------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 80vw;
+  max-height: 50vh;
+  margin: 25vh auto;
+  overflow: scroll;
+  padding: 2rem 4rem;
+  text-align: center;
+  pointer-events: all;
+}
+
+/* JS: Add active class to .modal when modal is opened */
+/* JS: Add active class to .modal-overlay when modal is opened */
+.modal.active, .modal-overlay.active {
+  display: block;
+}
+
+/* JS: add this class to the body when modal is opened */
+.modal-open {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.modal-overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(140, 140, 140, 0.5);
+  position: fixed;
+  z-index: 998;
+}
+
+/* Hidden properties
+display: none;
+visibility: hidden;
+*/
+
+/* RESPONSIVE DESIGN------------------------------------- */
 
 /* Conventional mobile breakpoint is 768px */
 
